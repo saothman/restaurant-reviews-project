@@ -45,3 +45,46 @@ self.addEventListener('activate', function(event) {
     })
   );
 });
+/** Hijack fetch requests */
+self.addEventListener('fetch', function(event) {
+  const requestUrl = new URL(event.request.url);
+
+  // only highjack request made to our local app without APIs
+  if (requestUrl.origin === location.origin) {
+
+    // allowing to access the restaurant Ids to the cache by using startWith method.
+    if (requestUrl.pathname.startsWith('/restaurant.html')) {
+      event.respondWith(caches.match('/restaurant.html'));
+      return;
+    }
+    // If the request pathname starts with /img, then we need to handle images.
+if (requestUrl.pathname.startsWith('/img')) {
+  event.respondWith(serveImage(event.request));
+  return;
+}
+  }
+
+  // the default behavior is respond with cached elements if any, falling back to network.
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
+
+function serveImage(request) {
+  let imageStorageUrl = request.url;
+
+// cache one image by stripping the suffix and extension
+  imageStorageUrl = imageStorageUrl.replace(/-small\.\w{3}|-medium\.\w{3}|-large\.\w{3}/i, '');
+
+  return caches.open(contentImgsCache).then(function(cache) {
+    return cache.match(imageStorageUrl).then(function(response) {
+      // if image is in cache, return it, else fetch from network, cache a clone, then return network response
+      return response || fetch(request).then(function(networkResponse) {
+        cache.put(imageStorageUrl, networkResponse.clone());
+        return networkResponse;
+      });
+    });
+  });
+}
