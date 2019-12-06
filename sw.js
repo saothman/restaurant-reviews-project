@@ -1,5 +1,5 @@
 const appName = "restaurant-reviews-app"
-const staticCacheName = appName + "-v1.0";
+const staticCacheName = appName + "-v1.5";
 // seperating imgs cach from the main cach
 const contentImgsCache = appName + "-images";
 
@@ -18,6 +18,7 @@ self.addEventListener('install', function(event) {
         '/restaurant.html',
         '/css/styles.css',
         '/css/styles-medium.css',
+        '/css/styles-large.css',
         '/js/dbhelper.js',
         '/js/mapbox.js',
         '/js/main.js',

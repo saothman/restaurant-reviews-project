@@ -163,8 +163,8 @@ class DBHelper {
 
 static imageSizesForRestaurant(restaurant) {
   return `(max-width: 360px) 280px,
-          (max-width: 600px) 600px,
-          800px`;
+            (max-width: 600px) 600px,
+            400px`;
 }
 
   /**
@@ -194,7 +194,7 @@ static imageSizesForRestaurant(restaurant) {
     const map = document.getElementById('map');
     map.className = "map-offline";
     map.innerHTML = `<div class="warning-icon">!</div>
-    <div class="warning-message">We're having problems loading Maps</div>
-    <div class="warning-suggestion">Are you offline? If you need to see a map, please check back later.</div>`;
+    <div class="warning-message">Oops! We're having problems loading Maps</div>
+    <div class="warning-suggestion">Maybe you are offline? If you need to see a map, try later.</div>`;
   }
 }

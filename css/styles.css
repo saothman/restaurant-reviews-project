@@ -41,11 +41,11 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	flex-direction: column;
 }
 #footer {
-	background-color: #444;
+	background-color: #252831;
 	color: #fff;
 	font-size: 0.9rem;
 	letter-spacing: 1px;
-	padding: 20px;
+	padding: 10px 0 10px 0;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -154,7 +154,7 @@ nav h1 a:hover{
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
-  padding: 30px 15px 60px;
+  padding: 30px 30px 60px;
   text-align: center;
 
 }
@@ -217,22 +217,22 @@ nav h1 a:hover{
   z-index: 1000;
 }
 .inside #map-container {
-	background: blue none repeat scroll 0 0;
-	height: 16%;
-	position: absolute;
-	right: 0;
-	top: 6%;
+	height: 80vw;
+	max-height: 400px;
+	position: static;
 	width: 100%;
+	margin-top: 150px;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
+	z-index: 1;
 }
 .inside #footer {
   bottom: 0;
   position: absolute;
-  max-width: 100%;
+  width: 100%;
 }
 #restaurant-name {
 	color: #009688;
@@ -270,9 +270,6 @@ nav h1 a:hover{
   padding: 0 0 30px;
   width: 100%;
 }
-#restaurant-container{
-	margin-top: 125%;
-}
 #restaurant-container tr,td{
 	font-size: 1rem;
 	padding-left: 20px;
@@ -298,14 +295,35 @@ nav h1 a:hover{
 	border-radius: 35px 80px 50px 10px;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px 10px;
+  margin: 0px 0px 30px 30px;
   overflow: hidden;
-  padding: 20px 20px 20px;
+  padding: 0px 0px 20px 0px;
   position: relative;
   width: 85%;
 }
+#review-heading{
+		background-color: #252831;
+		padding: 2%;
+}
+.review-heading{
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: #fff;
+	margin: 1%;
+}
+#review-rating{
+	background-color: #c7190c;
+	border-bottom: 3px solid #eee;
+	border-radius: 15px;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	display: block;
+	padding: 2%;
+	width: 22%;
+}
 #reviews-list li p {
-  margin: 0 0 10px;
+  margin: 10px 10px 10px 15px;
 }
 #restaurant-hours td {
   color: #666;
@@ -340,7 +358,7 @@ nav h1 a:hover{
   align-items: center;
   justify-content: center;
   border-radius: 40px;
-  background-color: #ff572296;
+  background-color: #c7190c;
   font-size: 2.5em;
   color: white;
   margin: 0 25px 25px;

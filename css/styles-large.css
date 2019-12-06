@@ -1,0 +1,104 @@
+p {
+    font-size: 11pt;
+}
+nav {
+  height: 80px;
+}
+nav h1 a {
+  font-size: 1.2rem;
+}
+.filter-options{
+   text-align: left;
+   display: inline-flex;
+   padding-top: 2%;
+}
+.filter-options h2 {
+    font-size: 1.2rem;
+    padding: 15px;
+}
+.filter-options select{
+   font-size: 1rem;
+   width: 30%
+}
+#restaurants-list li{
+  width: 27%;
+  padding: 0;
+}
+#restaurants-list .restaurant-img{
+  margin: 7px 4px;
+  width: 93%;
+}
+#restaurants-list li h1 {
+    font-size: 1rem;
+    margin-left: 20px;
+}
+#restaurants-list p {
+    font-size: 1rem;
+    margin-left: 20px;
+}
+#restaurants-list li a{
+    font-size: 1rem;
+    width: 70%;
+    padding: 10px 0px;
+    margin: 10px 50px;
+}
+#footer {
+  font-size: 1rem;
+  padding: 25px;
+}
+#breadcrumb {
+    font-size: 1rem;
+}
+.inside #map-container {
+  height: calc(100vh - 100px);
+  max-height: none;
+  position: fixed;
+  width: calc(200vw - 60%);
+  margin: 0;
+  left: 40%;
+  top: 130px;
+}
+#restaurant-container{
+  margin-top: 100px;
+}
+#restaurant-container, #reviews-container {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 15px 15px 0px;
+}
+#restaurant-name{
+  font-size: 1.2rem;
+}
+#restaurant-cuisine {
+  font-size: 1rem;
+}
+#restaurant-address {
+  font-size: 1rem;
+}
+#restaurant-container tr, td {
+  font-size: 1rem;
+}
+#reviews-container {
+  margin-bottom: 5%;
+}
+#reviews-container h2{
+  font-size: 1.3rem;
+}
+#reviews-list li {
+  border-radius: 20px 50px 30px 5px;
+  margin: 10px;
+  width: 95%;
+}
+.review-heading{
+  font-size: 1rem;
+}
+#review-rating{
+  font-size: 0.9rem;
+  width: 15%;
+}
+.inside #footer {
+  font-size: 0.8rem;
+  padding: 15px;
+  width: 40%;
+  box-sizing: border-box;
+}
