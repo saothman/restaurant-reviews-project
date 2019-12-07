@@ -1,5 +1,5 @@
 const appName = "restaurant-reviews-app"
-const staticCacheName = appName + "-v1.5";
+const staticCacheName = appName + "-v1.6";
 // seperating imgs cach from the main cach
 const contentImgsCache = appName + "-images";
 

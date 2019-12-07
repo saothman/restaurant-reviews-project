@@ -93,19 +93,23 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  name.tabIndex = '0';
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
+  address.tabIndex = '0';
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.alt = `Photo of ${restaurant.name}`;
+  image.tabIndex = '0';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.srcset = DBHelper.imageSrcsetForRestaurant(restaurant);
   image.sizes = DBHelper.imageSizesForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
+  cuisine.tabIndex = '0';
 
   // fill operating hours
   if (restaurant.operating_hours) {
@@ -133,6 +137,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 
     hours.appendChild(row);
   }
+  hours.tabIndex = '0';
 }
 
 /**
@@ -140,8 +145,9 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
+  title.tabIndex = '0';
   container.appendChild(title);
 
   if (!reviews) {
@@ -165,8 +171,10 @@ createReviewHTML = (review) => {
   const name = document.createElement('span');
   const heading = document.createElement('div');
   name.innerHTML = review.name;
+  name.tabIndex = '0';
   const date = document.createElement('span');
   date.innerHTML = review.date;
+  date.tabIndex = '0';
 
   name.setAttribute("class","review-heading");
   date.setAttribute("class","review-heading");
@@ -180,11 +188,13 @@ createReviewHTML = (review) => {
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.tabIndex = '0';
   rating.setAttribute("id","review-rating");
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.tabIndex = '0';
   li.appendChild(comments);
 
   return li;
@@ -197,6 +207,7 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  li.tabIndex = '0';
   breadcrumb.appendChild(li);
 }
 

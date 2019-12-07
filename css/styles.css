@@ -177,7 +177,7 @@ nav h1 a:hover{
 	min-height: 160px;
 	min-width: 95%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
 	color: #009688;
   font-family: Arial,sans-serif;
   font-size: 1rem;
@@ -277,7 +277,7 @@ nav h1 a:hover{
 #reviews-container{
 	margin-bottom: 10%;
 }
-#reviews-container h2 {
+#reviews-container h3 {
 	color: #009688;
 	font-size: 1.5rem;
 	font-weight: bolder;
