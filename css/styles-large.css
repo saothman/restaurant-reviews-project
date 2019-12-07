@@ -53,7 +53,7 @@ nav h1 a {
   height: calc(100vh - 100px);
   max-height: none;
   position: fixed;
-  width: calc(200vw - 60%);
+  width: calc(120vw - 60%);
   margin: 0;
   left: 40%;
   top: 130px;
